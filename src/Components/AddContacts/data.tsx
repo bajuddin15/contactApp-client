@@ -46,7 +46,7 @@ const useData = () => {
     };
 
     try {
-      await axios.post("/api/contact/create", data, config);
+      await axios.post("https://contact-app-server-db3w.onrender.com/api/contact/create", data, config);
       setLoading(false);
       setName("");
       setMobile("");
@@ -62,8 +62,6 @@ const useData = () => {
       toast.error("Something is wrong...")
     }
   };
-
-  React.useEffect(() => {}, []);
 
   const state: IState = {
     name,
