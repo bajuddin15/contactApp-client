@@ -15,7 +15,7 @@ const Home: React.FC<IProps> = () => {
         <Contacts />
       ) : (
         <>
-          <h5>Please Create an accont first..</h5>
+          <h5>Please Create an account first..</h5>
         </>
       )}
     </Container>
