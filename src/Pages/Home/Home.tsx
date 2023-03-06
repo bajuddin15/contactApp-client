@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import Contacts from "../../Components/Contacts/Contacts";
@@ -15,7 +16,9 @@ const Home: React.FC<IProps> = () => {
         <Contacts />
       ) : (
         <>
-          <h5>Please Create an account first..</h5>
+          <h5>Please create an account first..
+            <Link to="/register"> register</Link>
+          </h5>
         </>
       )}
     </Container>
