@@ -38,7 +38,7 @@ const useData = ()=>{
         };
 
         try {
-            const {data} = await axios.get("/api/contact", config)
+            const {data} = await axios.get("https://contact-app-server-db3w.onrender.com/api/contact", config)
             setContacts(data);
             setLoading(false);
         } catch (error) {
@@ -56,7 +56,7 @@ const useData = ()=>{
         };
 
         try {
-            await axios.delete(`/api/contact/${id}`,  config);
+            await axios.delete(`https://contact-app-server-db3w.onrender.com/api/contact/${id}`,  config);
             fetchAllContacts();
             toast.success("Your Contact delete successfully...")
         } catch (error) {
