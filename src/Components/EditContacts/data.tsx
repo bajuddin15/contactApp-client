@@ -46,7 +46,7 @@ const useData = () => {
     };
 
     try {
-      await axios.put(`/api/contact/${id}`, data, config);
+      await axios.put(`https://contact-app-server-db3w.onrender.com/api/contact/${id}`, data, config);
       setName("");
       setMobile("");
       setEmail("");
