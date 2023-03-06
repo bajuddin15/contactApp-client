@@ -17,7 +17,7 @@ const Home: React.FC<IProps> = () => {
       ) : (
         <>
           <h5>Please create an account first... 
-            <Link to="/register"> register</Link>
+            <Link to="/register" style={{marginLeft:'10px'}}> register</Link>
           </h5>
         </>
       )}
