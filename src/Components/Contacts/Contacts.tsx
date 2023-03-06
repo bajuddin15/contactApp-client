@@ -45,7 +45,6 @@ const Contacts: React.FC<IProps> = () => {
           <>
             {contacts &&
               contacts?.map((contact: any) => (
-                <Link to={`/contactDetail/${contact._id}`} state={{contact:contact}} style={{textDecoration:'none'}}>
                 <div className="contact-single-cont" key={contact._id} >
                   <div className="contact-single">
                     <div className="contactImg">
@@ -67,6 +66,14 @@ const Contacts: React.FC<IProps> = () => {
                     </div>
                   </div>
                   <div className="action-buttons">
+                    <Link to={`/contactDetail/${contact._id}`} state={{contact:contact}} style={{textDecoration:'none'}}>
+                    <Button
+                      variant="warning"
+                      size="lg"
+                      >
+                      Detail
+                    </Button>
+                      </Link>
                     <Button
                       variant="primary"
                       size="lg"
@@ -84,7 +91,6 @@ const Contacts: React.FC<IProps> = () => {
                     </Button>
                   </div>
                 </div>
-                 </Link>
                 
               ))}
           </>
